@@ -21,7 +21,7 @@ parse_all.character <- function(x, filename = NULL, allow_error = FALSE) {
   on.exit(options(op), add = TRUE)
 
   if (length(grep("\n", x)))
-    x <- unlist(str_split(x, "\n"), recursive = FALSE, use.names = FALSE)
+    x <- unlist(strsplit(x, "\n"), recursive = FALSE, use.names = FALSE)
   n <- length(x)
 
   if (is.null(filename))
